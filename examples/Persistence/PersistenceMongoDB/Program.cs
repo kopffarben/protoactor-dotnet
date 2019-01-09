@@ -12,7 +12,6 @@ using Proto.Remote;
 using Proto.Persistence;
 using Proto.Persistence.MongoDB;
 using MongoDB.Driver;
-using MongoDB.Bson;
 using Event = Proto.Persistence.Event;
 using Snapshot = Proto.Persistence.Snapshot;
 
@@ -22,7 +21,6 @@ using Proto.Persistence.SnapshotStrategies;
 using State = Messages.State;
 using RenameEvent = Messages.RenameEvent;
 using RenameCommand = Messages.RenameCommand;
-using ProtosReflection = Messages.ProtosReflection;
 
 class Program
 {
@@ -30,14 +28,14 @@ class Program
     {
 
 		var context = new RootContext();
-		//Serialization.RegisterFileDescriptor(ProtosReflection.Descriptor);
-		//Remote.Start("127.0.0.1", 12001);
 	
 		var MongoClient = new MongoClient("mongodb://localhost:27017");
 		var provider = new MongoDBProvider(MongoClient.GetDatabase("states"));
+		MongoDB.Bson.Serialization.BsonClassMap.RegisterClassMap<State>();
+		MongoDB.Bson.Serialization.BsonClassMap.RegisterClassMap<RenameEvent>();
+		MongoDB.Bson.Serialization.BsonClassMap.RegisterClassMap<RenameCommand>();
 
-	
-        var props = Props.FromProducer(() => new MyPersistenceActor(provider));
+		var props = Props.FromProducer(() => new MyPersistenceActor(provider));
 
         var pid = context.Spawn(props);
 
