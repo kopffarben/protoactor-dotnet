@@ -201,6 +201,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrawNiceTrace", "examples\T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersistenceMongoDB", "examples\Persistence\PersistenceMongoDB\PersistenceMongoDB.csproj", "{DC586F4D-C2EC-49CD-B5BC-2429F2F1FC0A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersistenceMongoDB_noAsync", "examples\Persistence\PersistenceMongoDB_noAsync\PersistenceMongoDB_noAsync.csproj", "{1C782AC5-198F-4721-A9CD-517593A726B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1014,6 +1016,18 @@ Global
 		{DC586F4D-C2EC-49CD-B5BC-2429F2F1FC0A}.Release|x64.Build.0 = Release|Any CPU
 		{DC586F4D-C2EC-49CD-B5BC-2429F2F1FC0A}.Release|x86.ActiveCfg = Release|Any CPU
 		{DC586F4D-C2EC-49CD-B5BC-2429F2F1FC0A}.Release|x86.Build.0 = Release|Any CPU
+		{1C782AC5-198F-4721-A9CD-517593A726B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C782AC5-198F-4721-A9CD-517593A726B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C782AC5-198F-4721-A9CD-517593A726B5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1C782AC5-198F-4721-A9CD-517593A726B5}.Debug|x64.Build.0 = Debug|Any CPU
+		{1C782AC5-198F-4721-A9CD-517593A726B5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1C782AC5-198F-4721-A9CD-517593A726B5}.Debug|x86.Build.0 = Debug|Any CPU
+		{1C782AC5-198F-4721-A9CD-517593A726B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C782AC5-198F-4721-A9CD-517593A726B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C782AC5-198F-4721-A9CD-517593A726B5}.Release|x64.ActiveCfg = Release|Any CPU
+		{1C782AC5-198F-4721-A9CD-517593A726B5}.Release|x64.Build.0 = Release|Any CPU
+		{1C782AC5-198F-4721-A9CD-517593A726B5}.Release|x86.ActiveCfg = Release|Any CPU
+		{1C782AC5-198F-4721-A9CD-517593A726B5}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1113,6 +1127,7 @@ Global
 		{1F19AC4F-31B5-40DA-B599-3F8F69731339} = {59DCCC96-DDAF-469F-9E8E-9BC733285082}
 		{25973551-0EE2-428A-842C-00D5EB8FBF94} = {1F19AC4F-31B5-40DA-B599-3F8F69731339}
 		{DC586F4D-C2EC-49CD-B5BC-2429F2F1FC0A} = {8622758C-75DB-4067-AB13-7D9531A16E9E}
+		{1C782AC5-198F-4721-A9CD-517593A726B5} = {8622758C-75DB-4067-AB13-7D9531A16E9E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CD0D1E44-8118-4682-8793-6B20ABFA824C}
