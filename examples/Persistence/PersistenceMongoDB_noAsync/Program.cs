@@ -26,12 +26,16 @@ class Program
 {
     static void Main(string[] args)
     {
-
 		var context = new RootContext();
 	
 		var MongoClient = new MongoClient("mongodb://localhost:27017");
 		var provider = new MongoDBProvider(MongoClient.GetDatabase("states"));
-		MongoDB.Bson.Serialization.BsonClassMap.RegisterClassMap<State>();
+
+		//MongoDB.Bson.Serialization.BsonClassMap.RegisterClassMap<State>();
+		var classMapp = new MongoDB.Bson.Serialization.BsonClassMap(typeof(State));
+		classMapp.AutoMap();
+		MongoDB.Bson.Serialization.BsonClassMap.RegisterClassMap(classMapp);
+
 		MongoDB.Bson.Serialization.BsonClassMap.RegisterClassMap<RenameEvent>();
 		MongoDB.Bson.Serialization.BsonClassMap.RegisterClassMap<RenameCommand>();
 
